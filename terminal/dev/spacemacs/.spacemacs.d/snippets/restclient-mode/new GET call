@@ -1,0 +1,11 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: new GET call
+# key: GET
+# --
+#
+#
+# $0
+#
+#
+GET :url/$1
+Authorization: :auth

@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: bstr
+# key: bstr
+# binding: direct-keybinding
+# --
+fields.String($1)
+$0

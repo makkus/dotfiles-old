@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: json
+# key: json
+# binding: direct-keybinding
+# --
+Accept-Encoding: application/json
+Content-Type: application/json
+$0

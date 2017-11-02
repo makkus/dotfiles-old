@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: boob
+# key: boob
+# binding: direct-keybinding
+# --
+fields.$1($2)
+$0

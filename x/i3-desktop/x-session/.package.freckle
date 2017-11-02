@@ -1,0 +1,4 @@
+stow_target_dir: /
+stow_method: copy
+stow_become: true
+stow_delete_conflicts: true

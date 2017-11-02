@@ -1,0 +1,22 @@
+- name: 'creating folders in sytem dir(s)'
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - /etc/X11/xorg.conf.d
+  become: yes
+
+- name: 'copying i3 xsession desktop file'
+  copy:
+    src: "{{ freckle_path }}/x-session/usr/share/xsessions/i3_xsession.desktop"
+    dest: "/usr/share/xsessions/i3_xsession.desktop"
+    remote_src: yes
+  become: yes
+
+- name: 'copying touchpad config'
+  copy:
+    src: "{{ freckle_path }}/x-session/etc/X11/xorg.conf.d/20-touchscreen.conf"
+    dest: "/etc/X11/xorg.conf.d/20-touchscreen.conf"
+    remote_src: yes
+  become: yes
+

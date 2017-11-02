@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: POST
+# key: POST
+# binding: direct-keybinding
+# --
+#
+#
+# $0
+#
+#
+POST :url/$1
+Authorization: :auth

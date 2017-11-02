@@ -1,0 +1,8 @@
+dotfiles:
+  pkg_mgr: auto
+  packages:
+    - tree
+    - zplug:
+       pkg_mgr: git
+       dest: ~/.zplug
+       repo: https://github.com/zplug/zplug

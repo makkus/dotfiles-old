@@ -1,0 +1,9 @@
+dotfiles:
+  packages:
+    - gpg:
+        pkgs:
+          darwin: 
+            - gpg2
+            - gpg-agent
+          other: ignore
+    

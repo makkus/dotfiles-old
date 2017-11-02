@@ -1,0 +1,18 @@
+- dotfiles:
+    pkg_mgr: auto
+    # nix mpv doesn't work
+    packages:
+      - mpv
+      - virt-viewer
+- dotfiles:
+    pkg_mgr: nix
+    packages:
+      - anki
+      - autocutsel
+      - chromium
+      - firefox
+      - rofi
+      - rofi-pass
+      - seafile-client
+      - scrot
+      - xclip

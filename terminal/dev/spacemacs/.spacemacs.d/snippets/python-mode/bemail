@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: bemail
+# key: bemail
+# binding: direct-keybinding
+# --
+fields.Email($1)
+$0

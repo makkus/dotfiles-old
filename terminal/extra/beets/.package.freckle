@@ -1,0 +1,3 @@
+pkg_mgr: nix
+pkgs:
+  darwin: ignore

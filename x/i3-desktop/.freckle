@@ -1,0 +1,22 @@
+- dotfiles:
+    pkg_mgr: auto
+    packages:
+      - blueman
+      - network-manager
+      - network-manager-gnome
+      - network-manager-openvpn
+      - pcscd
+      - pcsc-tools
+      - pulseaudio
+      - scdaemon
+      - tlp
+      - tlp-raw
+      - x11-xserver-utils
+      - xfce4
+      - xfce4-goodies
+
+- dotfiles:
+    pkg_mgr: nix
+    packages:
+      - i3status
+      - pasystray

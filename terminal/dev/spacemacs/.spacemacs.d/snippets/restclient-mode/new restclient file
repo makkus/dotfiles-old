@@ -1,0 +1,16 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: new restclient file
+# key: NEW
+# --
+#
+#
+# $1
+#
+#
+
+:url $2
+:token $3
+
+:auth = token :token
+
+$0

@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: xml
+# key: xml
+# binding: direct-keybinding
+# --
+Accept-Encoding: application/xml
+Content-Type: application/xml
+$0

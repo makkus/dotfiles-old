@@ -1,0 +1,22 @@
+- name: ensure gnupg config dir has right permissions
+  file:
+    path: "~/.gnupg"
+    mode: 0700
+    state: directory
+
+- name: importing gpg key stub
+  command: "gpg --import {{ freckle_path }}/gnupg/.gnupg/gpg_public.key"
+  args:
+    creates: "~/.gnupg/trustdb.gpg"
+  become: no
+
+- name: setting gpg key trust to 'ultimate'
+  shell: 'echo -e "trust\n5\ny\n" | gpg --command-fd 0 --edit-key m@ilmark.us'
+  become: no
+
+# if we do this now, git-crypt unlock will fail because gpg.conf is still encrypted
+#- name: stowing 'gnupg' folder
+#  stow:
+#    name: "gnupg"
+#    source_dir: "{{ freckle_path }}"
+#    target_dir: "~"

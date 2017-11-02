@@ -1,0 +1,15 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: package
+# key: package
+# --
+; package --- Summary
+
+;;; Commentary:
+;;; $1
+
+;;; Code:
+
+$0
+
+(provide '`(file-name-nondirectory (file-name-sans-extension (buffer-file-name))))`)
+;;; `(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`.el ends here

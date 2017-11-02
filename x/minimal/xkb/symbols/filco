@@ -1,0 +1,6 @@
+// Control is SWAPPED with Win-keys 
+partial modifier_keys
+xkb_symbols "menu_to_rctrl" {
+    key <MENU> {        [       Control_R               ]       };
+    modifier_map Control { <MENU> };
+};

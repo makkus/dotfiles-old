@@ -1,0 +1,7 @@
+- name: 'creating folders in home dir'
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - "~/.backups/zile"
+

@@ -1,0 +1,3 @@
+- dotfiles:
+    pkg_mgr: auto
+    packages: []

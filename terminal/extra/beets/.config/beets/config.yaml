@@ -1,0 +1,19 @@
+directory: /mnt/space/music
+library: /mnt/space/music/musiclibrary.blb
+
+import:
+  write: yes
+  move: yes
+  resume: yes
+
+paths:
+    albumtype:soundtrack: Soundtracks/$album/$track. $artist - $title
+    comp: Compilations/$album%aunique{}/$track. $artist - $title
+    singleton: Artists/$artist/non-album/$title
+    default: Artists/$albumartist/$album%aunique{}/$track. $title
+
+
+plugins: fetchart lastgenre discogs chroma
+
+chroma:
+  auto: yes

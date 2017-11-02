@@ -1,0 +1,4 @@
+- dotfiles:
+    pkg_mgr: nix
+    packages:
+      - emacs

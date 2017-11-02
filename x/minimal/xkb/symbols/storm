@@ -1,0 +1,6 @@
+// Control is SWAPPED with Win-keys 
+partial modifier_keys
+xkb_symbols "rwin_to_rctrl" {
+    key <RWIN> {        [       Control_R               ]       };
+    modifier_map Control { <RWIN> };
+};

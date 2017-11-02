@@ -1,0 +1,9 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: subarg
+# key: subarg
+# binding: direct-keybinding
+# --
+$1_parser = subparsers.add_parser('${1:$(s-replace "_" "-" yas-text)}', help='$2')
+$1_parser.add_argument('$3', type=$4, nargs=1, help='$5')
+$1_parser.set_defaults(func=self.$1, command='${1:$(s-replace "_" "-" yas-text)}')
+$0

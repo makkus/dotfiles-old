@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: bbool
+# key: bbool
+# binding: direct-keybinding
+# --
+fields.Boolean($1)
+$0

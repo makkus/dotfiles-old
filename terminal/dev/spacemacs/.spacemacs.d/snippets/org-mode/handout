@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: handout
+# key: handout
+# binding: direct-keybinding
+# --
+#+LaTeX_CLASS: handout
+#+TITLE: $1
+#+AUTHOR: Markus Binsteiner
+#+OPTIONS: toc:nil author:nil date:nil
+$0

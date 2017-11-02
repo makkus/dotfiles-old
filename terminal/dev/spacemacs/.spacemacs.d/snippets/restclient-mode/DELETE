@@ -1,0 +1,12 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: DELETE
+# key: DELETE
+# binding: direct-keybinding
+# --
+#
+#
+# $0
+#
+#
+DELETE :url/$1
+Authorization: :auth

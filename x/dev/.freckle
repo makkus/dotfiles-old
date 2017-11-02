@@ -1,0 +1,15 @@
+- dotfiles:
+    pkg_mgr: ansible_role
+    packages:
+      - vagrant
+
+- dotfiles:
+    pkg_mgr: auto
+    packages:
+      - virtualbox
+      - virtualbox-ext-pack
+
+- dotfiles:
+    pkg_mgr: nix
+    packages:
+      - idea-ultimate

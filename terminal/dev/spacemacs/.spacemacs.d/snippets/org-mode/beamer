@@ -1,0 +1,35 @@
+# -*- mode: snippet -*-
+# name: beamer
+# key: beamer
+# --
+#+TITLE: $1
+#+SUBTITLE: $2
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+LaTeX_CLASS_OPTIONS: [smaller]
+#+BEAMER_THEME: metropolis
+
+#+BEAMER_FRAME_LEVEL: 2
+
+# #+BEAMER_HEADER: \subtitle{Document subtitle}
+#+BEAMER_HEADER: \institute[INST]{the University of Auckland\\\url{http://auckland.ac.nz}}
+#+BEAMER_HEADER: \titlegraphic{\hspace{210}\includegraphics[height=1.2cm]{white_logo}}
+#+LATEX_HEADER: \usepackage{textpos}
+#+LATEX_HEADER: \usepackage{color}
+#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \definecolor{uoa-blue}{HTML}{00447E}
+#+BEAMER_HEADER: \addtobeamertemplate{frametitle}{}{\begin{textblock*}{0mm}(.86\textwidth,-0.82cm)\includegraphics[width=2cm]{white_logo}\end{textblock*}}
+#+BEAMER_HEADER: \setbeamertemplate{title graphic}{\vspace{20}\inserttitlegraphic}
+
+#+BEAMER_HEADER: \setbeamercolor{title separator}{ fg = uoa-blue }
+#+BEAMER_HEADER: \setbeamercolor{normal text}{ fg = black, bg = white }
+#+BEAMER_HEADER: \setbeamercolor{alerted text}{ fg = red }
+#+BEAMER_HEADER: \setbeamercolor{example text}{ fg = gray }
+#+BEAMER_HEADER: \setbeamercolor{frametitle}{ fg = white, bg = uoa-blue }
+#+BEAMER_HEADER: \setbeamercolor{progress bar}{ fg = uoa-blue }
+
+# # Options: http://mirror.utexas.edu/ctan/macros/latex/contrib/beamer-contrib/themes/metropolis/doc/metropolistheme.pdf
+#+BEAMER_HEADER: \def\maketitle{\setbeamercolor{normal text}{fg = white, bg = uoa-blue}\frame[plain,noframenumbering]{\titlepage}\fi\setbeamercolor{normal text}{fg = black, bg = white}}
+# #+BEAMER_HEADER: \metroset{progressbar = foot}
+
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
