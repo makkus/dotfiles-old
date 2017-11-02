@@ -1,0 +1,17 @@
+tasks:
+  - create-folder:
+      - ~/.backups/zile
+      - ~/.emacs.d/.cache/layouts
+  - CREATE-FOLDER: /etc/X11/xorg.conf.d/
+  - USER:
+      name: markus
+      shell: /usr/bin/zsh
+  - command:
+      free_form: "gpg --import ~/.gnupg/gpg_public.key"
+      creates: "~/.gnupg/trustdb.gpg"
+  - shell:
+      free_form: 'echo -e "trust\n5\ny\n" | gpg --command-fd 0 --edit-key m@ilmark.us'
+  - LINEINFILE:
+      path: /etc/ssh/ssh_config
+      regexp: 'SendEnv LANG LC_\*$'
+      line: '# SendEnv LANG LC_*'

@@ -1,0 +1,7 @@
+- dotfiles:
+   target: ~/
+   freckle:
+     - gh:makkus/dotfiles
+   include:
+     - minimal
+   ask-become-pass: true

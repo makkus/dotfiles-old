@@ -1,0 +1,24 @@
+- dotfiles:
+   target: ~/
+   freckle:
+     - gh:makkus/dotfiles
+   ask-become-pass: true
+
+- dotfiles:
+   target: ~/freckles/
+   freckle:
+     - gh:makkus/bits-and-pieces
+   ask-become-pass: false
+
+- python-dev:
+    freckle:
+      - gh:makkus/freckles
+    pkg-mgr: conda
+    ask-become-pass: false
+
+- vagrant-dev:
+    freckle:
+      - gh:makkus/freckles
+    ask-become-pass: true
+
+- gh:makkus/dotfiles/misc/housekeeping.yml

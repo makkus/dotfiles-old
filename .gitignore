@@ -1,0 +1,7 @@
+sec/ssh/.ssh/id_rsa
+sec/ssh/.ssh/id_rsa.pub
+sec/ssh/.ssh/*known_hosts*
+sec/ssh/.ssh/authorized_keys
+sec/gnupg/.gnupg/*
+
+

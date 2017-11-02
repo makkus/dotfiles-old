@@ -1,0 +1,19 @@
+- dotfiles:
+   target: ~/
+   freckle:
+     - gh:makkus/dotfiles
+   include:
+     - minimal
+   ask-become-pass: true
+
+- python-dev:
+    freckle:
+      - gh:makkus/freckles
+    ask-become-pass: true
+
+- vagrant-dev:
+    freckle:
+      - gh:makkus/freckles
+    ask-become-pass: true
+
+- gh:makkus/dotfiles/misc/housekeeping.yml
