@@ -11,6 +11,7 @@
       - autocutsel
       - chromium
       - firefox
+      - lxappearance
       - rofi
       - rofi-pass
       - seafile-client

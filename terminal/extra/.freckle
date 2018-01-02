@@ -15,6 +15,7 @@
 #      - python3.6-cookiecutter
       - emacs
       - fasd-unstable
+      - fzf
       - git-crypt
       - htop
       - imagemagick
