@@ -6,6 +6,7 @@
 ;;; Code:
 
 (require 'helm-projectile)
+(require 'helm-bookmark)
 
 
 (defun my-helm ()
@@ -21,7 +22,6 @@
 
     '(
       helm-source-bookmarks
-      helm-source-recentf
       helm-source-projectile-projects
       helm-source-buffers-list
       helm-source-locate
@@ -31,6 +31,5 @@
     )
    helm-buffer ; " *my-helm*"
    ))
-
 
 (provide 'config_helm)
