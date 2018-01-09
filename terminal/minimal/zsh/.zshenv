@@ -8,6 +8,10 @@ if [ -d $HOME/.pyenv ]; then
     export PATH="$HOME/.pyenv/bin:$PATH"
 fi
 
+if [ -d $HOME/freckles/bits-and-pieces/scripts ]; then
+    export PATH="$HOME/freckles/bits-and-pieces/scripts:$PATH"
+fi
+
 export XDG_DATA_DIRS=$HOME/.nix-profile/share:/usr/local/share/:/usr/share
 
 GPG_TTY=$(tty)

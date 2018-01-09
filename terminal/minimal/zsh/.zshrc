@@ -48,9 +48,11 @@ zplug "plugins/rsync", from:oh-my-zsh
 zplug "plugins/pass", from:oh-my-zsh
 
 #zplug "robbyrussell/oh-my-zsh", use:"lib/*.zsh", nice:14
-zplug "themes/ys", from:oh-my-zsh, as:theme
+#zplug "themes/ys", from:oh-my-zsh, as:theme
 #zplug 'dracula/zsh', as:theme
 # zplug "tylerreckart/odin"
+zplug mafredri/zsh-async, from:github
+zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 
 # Then, source plugins and add commands to $PATH
 #zplug load --verbose

@@ -33,3 +33,5 @@
 	showUntrackedFiles = all
 [credential]
 	helper = cache --timeout=7200
+[github]
+	user = makkus
