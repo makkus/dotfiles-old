@@ -54,8 +54,8 @@ bindsym	 Control+Shift+B workspace prev_on_output
 bindsym	 Control+Shift+F workspace next_on_output
 bindsym  $mod+n	workspace back_and_forth
 
-assign [class="Firefox"] "$ws1"
-assign [class="Chromium-browser"] "$ws2"
+assign [class="Firefox"] "$ws2"
+assign [class="Chromium-browser"] "$ws1"
 
 
 # Alt as mod key
@@ -103,10 +103,10 @@ bindsym	 $mod+Control+k move up
 bindsym	 $mod+Control+l move right
 
 # resize windows
-bindsym $mod+semicolon resize shrink width 10 px or 10 ppt
-bindsym $mod+apostrophe resize grow width 10 px or 10 ppt
-bindsym $mod+slash resize grow height 10 px or 10 ppt
-bindsym $mod+period resize shrink height 10 px or 10 ppt
+bindsym $mod+semicolon resize shrink width 5 px or 5 ppt
+bindsym $mod+apostrophe resize grow width 5 px or 5 ppt
+bindsym $mod+slash resize grow height 5 px or 5 ppt
+bindsym $mod+period resize shrink height 5 px or 5 ppt
 
 # split in horizontal orientation
 bindsym	 $mod+y split h
@@ -224,9 +224,9 @@ bindsym F7 move scratchpad
 
 # rofi
 # start rofi for applications (a program launcher)
-bindsym	 $mod+d exec rofi $(/home/markus/local/bin/i3-color-rofi) -show run
+bindsym	 $mod+d exec rofi $(/home/markus/local/bin/i3-color-rofi) -show run -matching fuzzy
 # start rofi for open windows
-bindsym	 $mod+backslash exec rofi $(/home/markus/local/bin/i3-color-rofi) -show window
+bindsym	 $mod+backslash exec rofi $(/home/markus/local/bin/i3-color-rofi) -show window -matching fuzzy
 # rofi-pass
 bindsym  $mod+p exec rofi-pass
 
