@@ -245,6 +245,8 @@ unalias di
 alias ag=x
 unalias ag
 
+unalias grv
+
 # bindkeys
 bindkey -e
 bindkey '^L' backward-kill-word  # helm-like delete last part of path
