@@ -236,7 +236,8 @@ bindsym $mod+z exec  scrot -u  '%Y%m%d_%H%M%S.png' -e 'mv $f ~/Pictures/Screensh
 bindsym $mod+Shift+z exec  scrot -s  '%Y%m%d_%H%M%S.png' -e 'mv $f ~/Pictures/Screenshots/'
 
 # start a terminal, not using i3-sensible-terminal
-bindsym	 $mod+Return exec urxvt
+bindsym	 $mod+Return exec termite
+#bindsym	 $mod+Return exec urxvt
 #bindsym	 $mod+Return exec gnome-terminal
 
 for_window [title="^org-capture$"] floating enable
