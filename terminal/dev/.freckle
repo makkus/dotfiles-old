@@ -3,4 +3,11 @@
     packages:
       - emacs
 
+- dotfiles:
+    pkg_mgr: pip
+    virtualenv: ~/.virtualenvs/global_virtualenv
+    packages:
+      - bumpversion
+      - cookiecutter
+
 - ansible-tasks
