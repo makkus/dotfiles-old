@@ -1,4 +1,4 @@
-export PATH=$HOME/local/bin:$PATH
+export PATH=$HOME/local/bin:$HOME/.virtualenvs/global_virtualenv/bin:$PATH
 if [ -f $HOME/.nix-profile/etc/profile.d/nix.sh ];
 then
 	source $HOME/.nix-profile/etc/profile.d/nix.sh

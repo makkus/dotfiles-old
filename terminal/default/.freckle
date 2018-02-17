@@ -1,0 +1,35 @@
+- dotfiles:
+    pkg_mgr: auto
+    packages:
+      - direnv
+      - gawk
+      - pypy
+      - pypy-dev
+      - python-dev
+      - python3-dev
+      - unrar
+      - virtualenv
+      - virtualenvwrapper
+- dotfiles:
+    pkg_mgr: nix
+    packages:
+      - di
+      - emacs
+      - fasd-unstable
+      - fzf
+      - git-crypt
+      - htop
+      - imagemagick
+      - lnav
+      - mu
+      - pandoc
+      - password-store
+      - silver-searcher
+      - ranger
+      - ripgrep
+- dotfiles:
+    pkg_mgr: pip
+    virtualenv: ~/.virtualenvs/global_virtualenv
+    packages:
+      - starred
+

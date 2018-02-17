@@ -10,7 +10,7 @@
       - pulseaudio
       - scdaemon
       - tlp
-      - tlp-raw
+      # - tlp-raw
       - x11-xserver-utils
       - xfce4
       - xfce4-goodies
