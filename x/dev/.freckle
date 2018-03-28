@@ -9,7 +9,7 @@
       - virtualbox
       - virtualbox-ext-pack
 
-- dotfiles:
-    pkg_mgr: nix
-    packages:
-      - idea-ultimate
+#- dotfiles:
+#    pkg_mgr: nix
+#    packages:
+#      - idea-ultimate
