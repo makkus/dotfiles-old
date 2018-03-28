@@ -2,6 +2,7 @@
     pkg_mgr: nix
     packages:
       - emacs
+      - bats
 
 - dotfiles:
     pkg_mgr: pip
