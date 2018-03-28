@@ -217,9 +217,13 @@ if exists di; then
     alias df='di'
 fi
 
+#export EDITOR="zile"
 export ALTERNATE_EDITOR=""
-export EDITOR="zile"
-export VISUAL="zile"
+export EDITOR="emacsclient -t"
+export VISUAL="emacsclient -c -a emacs"
+
+#alias et="emacsclient -t"
+#alias ec="emacsclient -c -a emacs"
 
 alias p='get_process_id'
 alias pp='get_process_parents'
@@ -270,12 +274,12 @@ if exists percol; then
     bindkey '^S' percol_select_history
 fi
 
-if exists fasd; then
-    eval "$(fasd --init auto)"
-    bindkey '^X^A' fasd-complete    # C-x C-a to do fasd-complete (files and directories)
-    bindkey '^X^F' fasd-complete-f  # C-x C-f to do fasd-complete-f (only files)
-    bindkey '^X^D' fasd-complete-d  # C-x C-d to do fasd-complete-d (only directories)
-fi
+#if exists fasd; then
+#    eval "$(fasd --init auto)"
+#    bindkey '^X^A' fasd-complete    # C-x C-a to do fasd-complete (files and directories)
+#    bindkey '^X^F' fasd-complete-f  # C-x C-f to do fasd-complete-f (only files)
+#    bindkey '^X^D' fasd-complete-d  # C-x C-d to do fasd-complete-d (only directories)
+#fi
 
 #if [ -e /usr/share/virtualenvwrapper/virtualenvwrapper.sh ]; then . /usr/share/virtualenvwrapper/virtualenvwrapper.sh; fi
 #if [ -e /usr/local/bin/virtualenvwrapper.sh ]; then . /usr/local/bin/virtualenvwrapper.sh; fi
@@ -323,6 +327,9 @@ fi
 zstyle ":completion:*:commands" rehash 1
 zstyle ':completion:*:sudo::' environ  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH" HOME="/root"
 
+# show cdpath location
+zstyle ':completion:*:descriptions' format %S%d%s
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_COMPLETION_OPTS='+c'
 export FZF_COMPLETION_TRIGGER=';;'
@@ -331,3 +338,15 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="find -L $HOME \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune -o -type d -print 2> /dev/null | sed 1d"
 
 
+
+# added by travis gem
+[ -f /home/markus/.travis/travis.sh ] && source /home/markus/.travis/travis.sh
+
+#compdef luci
+_luci() {
+  eval $(env COMMANDLINE="${words[1,$CURRENT]}" _LUCI_COMPLETE=complete-zsh  luci)
+}
+if [[ "$(basename ${(%):-%x})" != "_luci" ]]; then
+  autoload -U compinit && compinit
+  compdef _luci luci
+fi
