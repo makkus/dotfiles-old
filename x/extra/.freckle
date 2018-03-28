@@ -10,7 +10,7 @@
       - anki
       - autocutsel
       - chromium
-      - firefox
+      # - firefox
       - lxappearance
       - rofi
       - rofi-pass
