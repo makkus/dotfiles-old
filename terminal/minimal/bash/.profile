@@ -5,7 +5,7 @@ echo "DESKTOP_SESSION: $DESKTOP_SESSION" >>$LOG
 echo "GDMSESSION: $GDMSESSION" >>$LOG
 
 
-export PATH=/home/markus/local/bin:/home/markus/.local/bin:/usr/local/bin:/opt/idea/bin:/opt/mvn/bin:$PATH
+export PATH=/home/markus/local/bin:/home/markus/.local/bin:/usr/local/bin:/opt/idea/bin:/opt/mvn/bin:$PATH:$HOME/.virtualenvs/global_virtualenv/bin:
 export PYTHONPATH=$HOME/.nix-profile/lib/python2.7/site-packages
 
 GPG_TTY=$(tty)
