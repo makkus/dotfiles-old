@@ -19,6 +19,10 @@ isavailable autocutsel && {
     autocutsel -selection PRIMARY -fork &
 }
 
+isavailable emacs && {
+    emacs --daemon
+}
+
 isavailable redshift && redshift &
 
 #isavailable udiskie && udiskie --tray --use-udisks2 &
