@@ -1,5 +1,5 @@
 - dotfiles:
-    pkg_mgr: nix
-    packages:
-      - trash-cli
+    install:
+      - trash-cli:
+          pkg_mgr: nix
 

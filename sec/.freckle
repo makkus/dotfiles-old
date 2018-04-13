@@ -1,5 +1,5 @@
 - dotfiles:
-    packages:
+    install:
       - gpg:
           pkgs:
             darwin: 

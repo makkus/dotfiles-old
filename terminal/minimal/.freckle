@@ -1,6 +1,5 @@
 - dotfiles:
-    pkg_mgr: auto
-    packages:
+    install:
       - tree
       - zplug:
          pkg_mgr: git

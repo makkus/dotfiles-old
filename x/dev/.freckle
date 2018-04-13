@@ -1,13 +1,14 @@
 - dotfiles:
-    pkg_mgr: ansible_role
-    packages:
-      - vagrant
-
-- dotfiles:
-    pkg_mgr: auto
-    packages:
-      - virtualbox
-      - virtualbox-ext-pack
+   install:
+     - vars:
+         pkg_mgr: ansible_role
+       packages:
+         - vagrant
+     - vars:
+         pkg_mgr: auto
+       packages:
+         - virtualbox
+         - virtualbox-ext-pack
 
 #- dotfiles:
 #    pkg_mgr: nix
