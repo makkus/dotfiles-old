@@ -4,6 +4,7 @@
     state: directory
   with_items:
     - /etc/X11/xorg.conf.d
+    - /usr/share/xsessions
   become: yes
 
 - name: 'copying i3 xsession desktop file'
