@@ -5,3 +5,11 @@ sec/ssh/.ssh/authorized_keys
 sec/gnupg/.gnupg/*
 
 
+*.elc
+/terminal/dev/emacs/.emacs.d/.swp
+/terminal/dev/emacs/.emacs.d/auto-save-files/
+
+/terminal/dev/emacs/.emacs.d/persp-confs/persp-auto-save
+/terminal/dev/emacs/.emacs.d/smex-items
+/terminal/dev/emacs/.emacs.d/projectile-bookmarks.eld
+/terminal/dev/emacs/.emacs.d/.mc-lists.el
