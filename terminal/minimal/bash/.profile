@@ -5,7 +5,7 @@ echo "DESKTOP_SESSION: $DESKTOP_SESSION" >>$LOG
 echo "GDMSESSION: $GDMSESSION" >>$LOG
 
 
-export PATH=/home/markus/local/bin:/home/markus/.local/bin:/usr/local/bin:/opt/idea/bin:/opt/mvn/bin:$PATH:$HOME/.virtualenvs/global_virtualenv/bin:
+export PATH=/home/markus/local/bin:/home/markus/.local/bin:/home/markus/.local/apps:/usr/local/bin:/opt/idea/bin:/opt/mvn/bin:$PATH:$HOME/.virtualenvs/global_virtualenv/bin:$HOME/.virtualenvs/global-dev/bin
 export PYTHONPATH=$HOME/.nix-profile/lib/python2.7/site-packages
 
 GPG_TTY=$(tty)
@@ -28,3 +28,5 @@ INAUGURATE_PATH="$HOME/.local/bin"
 if [ -d "$INAUGURATE_PATH" ]; then
     PATH="$PATH:$INAUGURATE_PATH"
 fi
+
+export LOCALE_ARCHIVE="$(readlink ~/.nix-profile/lib/locale)/locale-archive"
