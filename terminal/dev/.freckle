@@ -1,15 +1,24 @@
 - dotfiles:
     install:
       - vars:
-          pkg_mgr: nix
+          pkg_mgr: auto
         packages:
           - emacs
           - bats
       - vars:
           pkg_mgr: pip
-          virtualenv: ~/.virtualenvs/global_virtualenv
+          virtualenv: ~/.virtualenvs/global-dev
+          virtualenv_python: python3.6
         packages:
           - bumpversion
           - cookiecutter
+          - rope
+          - pyflakes
+          - mccabe
+          - pydocstyle
+          - yapf
+          - pyls-mypy
+          - pyls-isort
+          - python-language-server[all]
 
 - ansible-tasks
