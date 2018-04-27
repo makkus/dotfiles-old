@@ -16,3 +16,5 @@ sec/gnupg/.gnupg/*
 /terminal/dev/emacs/.emacs.d/projectile-bookmarks.eld
 /terminal/dev/emacs/.emacs.d/.mc-lists.el
 /terminal/dev/ipython/.ipython/profile_default/history.sqlite
+
+terminal/dev/emacs/.emacs.d/anaconda-mode
