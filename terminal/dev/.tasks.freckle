@@ -4,3 +4,4 @@
     state: directory
   with_items:
     - "~/.emacs.d/.cache/layouts"
+    - "~/.backups/emacs

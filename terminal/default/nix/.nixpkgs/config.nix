@@ -10,5 +10,4 @@
      jdk = pkgs.oraclejdk8psu;
       };
 
-
 }

@@ -1,21 +1,24 @@
 - dotfiles:
    install:
-     - vars:
-         pkg_mgr: auto
-         # nix mpv doesn't work
-       packages:
-         - mpv
-         - virt-viewer
+     # - vars:
+     #     pkg_mgr: auto
+     #     # nix mpv and rofi don't work
+     #   packages:
+     #     #- mpv
+     #     - virt-viewer
+     #     #- rofi
      - vars:
          pkg_mgr: nix
        packages:
          - anki
          - autocutsel
-         - chromium
+         # - chromium
          # - firefox
          - lxappearance
+         - mpv
          - rofi
          - rofi-pass
-         # - seafile-client
+         #- seafile-client
          - scrot
+         - virt-viewer
          - xclip

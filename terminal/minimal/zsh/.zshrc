@@ -52,7 +52,8 @@ zplug "plugins/pass", from:oh-my-zsh
 #zplug 'dracula/zsh', as:theme
 # zplug "tylerreckart/odin"
 zplug mafredri/zsh-async, from:github
-zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+#zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
 
 # Then, source plugins and add commands to $PATH
 #zplug load --verbose
@@ -222,6 +223,8 @@ export ALTERNATE_EDITOR=""
 export EDITOR="emacsclient -t"
 export VISUAL="emacsclient -c -a emacs"
 
+alias zile="emacsclient -t"
+
 #alias et="emacsclient -t"
 #alias ec="emacsclient -c -a emacs"
 
@@ -350,3 +353,6 @@ if [[ "$(basename ${(%):-%x})" != "_luci" ]]; then
   autoload -U compinit && compinit
   compdef _luci luci
 fi
+#eclectica start
+command -v ec > /dev/null && export PATH="$(ec path)"
+#eclectica end

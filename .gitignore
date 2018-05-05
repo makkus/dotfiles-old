@@ -18,3 +18,5 @@ sec/gnupg/.gnupg/*
 /terminal/dev/ipython/.ipython/profile_default/history.sqlite
 
 terminal/dev/emacs/.emacs.d/anaconda-mode
+old
+terminal/dev/ipython/.ipython/profile_default/db/dhist

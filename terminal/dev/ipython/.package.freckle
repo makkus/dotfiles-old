@@ -1,0 +1,4 @@
+pkg_mgr: pip
+virtualenv: ~/.virtualenvs/global-dev
+
+

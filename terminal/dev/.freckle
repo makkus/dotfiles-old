@@ -8,7 +8,7 @@
       - vars:
           pkg_mgr: pip
           virtualenv: ~/.virtualenvs/global-dev
-          virtualenv_python: python3.6
+          virtualenv_python: python2.7
         packages:
           - bumpversion
           - cookiecutter
@@ -17,8 +17,13 @@
           - mccabe
           - pydocstyle
           - yapf
-          - pyls-mypy
           - pyls-isort
           - python-language-server[all]
+          - jedi
+          - autopep8
+          - yapf
+          - flake8
+          - importmagic
+          - epc
 
 - ansible-tasks

@@ -6,8 +6,8 @@
 
 - name: importing gpg key stub
   command: "gpg --import {{ freckle_path }}/gnupg/.gnupg/gpg_public.key"
-  args:
-    creates: "~/.gnupg/trustdb.gpg"
+  #args:
+  #  creates: "~/.gnupg/trustdb.gpg"
   become: no
 
 - name: setting gpg key trust to 'ultimate'

@@ -1,7 +1,0 @@
-# -*- mode: snippet; require-final-newline: nil -*-
-# name: bint
-# key: bint
-# binding: direct-keybinding
-# --
-fields.Integer($1)
-$0

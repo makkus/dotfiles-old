@@ -1,3 +1,9 @@
+- name: 'symlinking nix .terminfo dir'
+  file:
+    src: "{{ ansible_env.HOME }}/.nix-profile/share/terminfo"
+    dest: "{{ ansible_env.HOME }}/.terminfo"
+    state: link
+
 - name: 'creating folders in sytem dir(s)'
   file:
     path: "{{ item }}"
@@ -20,4 +26,3 @@
     dest: "/etc/X11/xorg.conf.d/20-touchscreen.conf"
     remote_src: yes
   become: yes
-

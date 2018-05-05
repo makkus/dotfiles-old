@@ -33,11 +33,11 @@
   (setq conda-anaconda-home "/home/markus/.local/share/inaugurate/conda/")
   :functions conda-env-initialize-interactive-shells
   :config
-  (with-no-warnings
+  (progn
     (conda-env-autoactivate-mode t)
     (conda-env-initialize-interactive-shells)
-    (conda-env-initialize-eshell))
-  (setq-default mode-line-format (cons '(:exec conda-env-current-name) mode-line-format)))
+    (conda-env-initialize-eshell)
+    (setq-default mode-line-format (cons '(:exec conda-env-current-name) mode-line-format))))
 
 (use-package winner
   :ensure t
@@ -72,7 +72,8 @@
 (use-package ace-window
   :ensure t
   :defer t
-  :chords (";j" . ace-window)
+  :chords ((";j" . ace-window)
+           (":J" . ace-swap-window))
   :config
   (setq aw-keys '(?a ?s ?d ?f ?g ?h ?j ?k ?l)))
 
@@ -97,3 +98,83 @@
   :ensure t
   :defer t
   :bind (("M-SPC g s" . magit-status)))
+
+(use-package importmagic
+  :ensure t
+  :config
+  (add-hook 'python-mode-hook 'importmagic-mode))
+
+(use-package counsel-projectile
+  :ensure t
+  :bind (("M-SPC s p" . counsel-projectile-ag))
+  :config
+  (setq counsel-ag-base-command "ag --nocolor --nogroup --hidden %s")
+  (counsel-projectile-mode)
+)
+
+(use-package smex
+  :ensure t)
+
+(use-package emojify
+  :ensure t
+  :config
+  (add-hook 'after-init-hook #'global-emojify-mode))
+
+;; (use-package aggressive-indent
+  ;; :ensure
+
+;; (add-hook 'python-mode-hook #'aggressive-indent-mode))
+
+(use-package helm-mu
+  :ensure t
+  :defer t
+  :bind ("M-SPC s m" . helm-mu))
+
+(use-package unicode-fonts
+  :ensure t
+  :commands unicode-fonts-setup
+  :config
+  (progn
+    (use-package persistent-soft)
+    (unicode-fonts-setup)))
+
+(use-package perspective
+  :ensure t
+  :config
+  (progn
+    (persp-mode)
+    (use-package persp-projectile
+      :ensure t
+      )))
+
+(use-package elfeed
+  :ensure t
+  :defer t
+  :config
+  (progn
+    (define-key elfeed-show-mode-map (kbd "B") 'makkus/elfeed-show-visit-gui)
+    (use-package elfeed-org
+      :ensure t
+      :config
+      (progn
+        (elfeed-org)
+        (setq rmh-elfeed-org-files (list "~/Documents/notes/elfeed.org"))))
+    (use-package elfeed-goodies
+      :ensure t
+      :config
+      (progn
+        (elfeed-goodies/setup))))
+  )
+
+
+(use-package color-theme-sanityinc-tomorrow
+  :ensure t
+  :defer t)
+
+(use-package circadian
+  :ensure t
+  :config
+  (progn
+    (setq circadian-themes '(("8:00" . sanityinc-tomorrow-day)
+                           ("19:30" . sanityinc-tomorrow-night)))
+    (circadian-setup)))
