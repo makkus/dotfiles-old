@@ -6,4 +6,4 @@
          dest: ~/.zplug
          repo: https://github.com/zplug/zplug
 
-- ansible-tasks
+# - ansible-tasks

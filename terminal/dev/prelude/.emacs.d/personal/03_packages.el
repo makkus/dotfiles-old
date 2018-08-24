@@ -21,10 +21,14 @@
     (add-hook 'python-mode-hook 'anaconda-mode)
     (add-hook 'python-mode-hook 'eldoc-mode)))
 
-(use-package py-yapf
-  :ensure t
-  :config
-  (add-hook 'python-mode-hook 'py-yapf-enable-on-save))
+;; (use-package py-yapf
+;;   :ensure t
+;;   :config
+;;   (add-hook 'python-mode-hook 'py-yapf-enable-on-save))
+;; (use-package yapfify
+;;   :ensure t
+;;   :config
+;;   (add-hook 'python-mode-hook 'yapf-mode))
 
 (use-package conda
   :defer t
@@ -170,6 +174,11 @@
 (use-package color-theme-sanityinc-tomorrow
   :ensure t
   :defer t)
+
+(use-package ox-hugo
+  :ensure t
+  :after ox)
+(use-package ox-hugo-auto-export)
 
 (use-package circadian
   :ensure t

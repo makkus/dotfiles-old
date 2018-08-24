@@ -120,3 +120,7 @@ fi
 
 # added by travis gem
 [ -f /home/markus/.travis/travis.sh ] && source /home/markus/.travis/travis.sh
+
+# . $HOME/.asdf/asdf.sh
+
+# . $HOME/.asdf/completions/asdf.bash

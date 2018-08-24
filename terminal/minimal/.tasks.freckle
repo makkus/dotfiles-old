@@ -4,4 +4,3 @@
     state: directory
   with_items:
     - "~/.backups/zile"
-

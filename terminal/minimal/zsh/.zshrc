@@ -310,49 +310,11 @@ export NIXPKGS=$HOME/src/system/nixpkgs
 # less stuff (from: https://www.topbug.net/blog/2016/09/27/make-gnu-less-more-powerful/ )
 export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
 # Set colors for less. Borrowed from https://wiki.archlinux.org/index.php/Color_output_in_console#less
-export LESS_TERMCAP_mb=$'\E[1;31m'     # begin bold
-export LESS_TERMCAP_md=$'\E[1;36m'     # begin blink
-export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
-export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
-export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
-export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
-export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
-# Set the Less input preprocessor.
-if type lesspipe >/dev/null 2>&1; then
-  export LESSOPEN='|lesspipe %s'
-fi
-# if type pygmentize >/dev/null 2>&1; then
-  # export LESSCOLORIZER='pygmentize'
-#fi
 
 
-# don't use cached auto-complete
-zstyle ":completion:*:commands" rehash 1
-zstyle ':completion:*:sudo::' environ  PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH" HOME="/root"
+# . $HOME/.asdf/asdf.sh
 
-# show cdpath location
-zstyle ':completion:*:descriptions' format %S%d%s
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_COMPLETION_OPTS='+c'
-export FZF_COMPLETION_TRIGGER=';;'
-export FZF_DEFAULT_COMMAND="find -L $HOME \( -path '*/.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune -o -type f -print -o -type d -print -o -type l -print 2> /dev/null | sed 1d"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="find -L $HOME \( -path '*/\.*' -o -fstype 'dev' -o -fstype 'proc' \) -prune -o -type d -print 2> /dev/null | sed 1d"
-
-
+# . $HOME/.asdf/completions/asdf.bash
 
 # added by travis gem
 [ -f /home/markus/.travis/travis.sh ] && source /home/markus/.travis/travis.sh
-
-#compdef luci
-_luci() {
-  eval $(env COMMANDLINE="${words[1,$CURRENT]}" _LUCI_COMPLETE=complete-zsh  luci)
-}
-if [[ "$(basename ${(%):-%x})" != "_luci" ]]; then
-  autoload -U compinit && compinit
-  compdef _luci luci
-fi
-#eclectica start
-command -v ec > /dev/null && export PATH="$(ec path)"
-#eclectica end

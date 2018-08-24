@@ -1,6 +1,7 @@
 [user]
-	email = m_b@posteo.net
+	email = makkus@frkl.io
 	name = Markus Binsteiner
+	signingkey = 9E652A4ED0149FB5
 [alias]
 	co = checkout
 	uncommit = reset --mixed HEAD~
@@ -35,3 +36,5 @@
 	helper = cache --timeout=7200
 [github]
 	user = makkus
+[commit]
+	gpgsign = true

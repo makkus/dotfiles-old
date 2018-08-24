@@ -38,6 +38,9 @@
       kept-old-versions 5    ; and how many of the old
       )
 
+(setq auto-save-file-name-transforms
+      `((".*" ,(concat user-emacs-directory "tempfiles") t)))
+
 (setq ivy-initial-inputs-alist nil)
 
 (setq prelude-auto-save nil)
@@ -144,3 +147,5 @@
 
 (which-key-setup-side-window-right-bottom)
 (setq which-key-sort-order 'which-key-key-order-alpha)
+
+;;(setq org-cycle-separator-lines -1)
